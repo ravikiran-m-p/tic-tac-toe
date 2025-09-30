@@ -1,83 +1,165 @@
-=body {
+body{
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    background: linear-gradient(145deg, #1c1c1c, #2a2a2a);
     margin: 0;
+    color: #f5d76e;
 }
 
-h1 {
+h1{
     margin-bottom: 20px;
-    color: #333;
-    text-shadow: 1px 1px 2px #aaa;
+    color: #f5d76e;
+    text-shadow: 1px 1px 4px #000;
 }
 
-.board-container {
+
+.board-container{
     position: relative;
 }
 
-.board {
+
+.board{
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 120px);
-    gap: 10px;
-    background: #fff;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    gap: 12px;
+    background: #111;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
 }
 
-.cell {
+/*each cell style with color golden and trasnition effects when clicked */
+.cell{
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
     cursor: pointer;
-    background: linear-gradient(145deg, #e0e0e0, #ffffff);
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 5px #ccc, inset -2px -2px 5px #fff;
-    transition: transform 0.2s;
+    background: linear-gradient(145deg, #333, #111);
+    border-radius: 12px;
+    border: 2px solid #f5d76e;
+    box-shadow: inset 2px 2px 5px #222, inset -2px -2px 5px #444;
+    transition: transform 0.2s, background 0.3s;
+    color: #f5d76e;
 }
 
-.cell:hover {
+/* when hover the cells white appears on that cell only*/
+.cell:hover{
     transform: scale(1.1);
+    background: linear-gradient(145deg, #444, #222);
 }
 
-#strikeLine {
+/* strike line */
+#strikeLine{
     position: absolute;
-    background-color: rgba(255,0,0,0.8);
-    height: 5px;
-    width: 0;
-    top: 0;
-    left: 0;
-    transform-origin: center;
-    transition: all 0.5s ease;
+    background: linear-gradient(to right, #f5d76e, #ffd700); 
+    border-radius: 3px;
+    transition: all 0.4s ease;
     z-index: 1;
 }
 
-button {
+/* strike line from --> top row */
+.strike-0{
+    top: 16.66%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+}
+
+/* strike line from --> middle row */
+.strike-1 {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform: translateY(-50%);
+}
+
+/* strike line from --> bottom row */
+.strike-2{
+    bottom: 16.66%;
+    left: 0;
+    width: 100%;
+    height: 6px;
+}
+
+/* strike line from --> left column */
+.strike-3{
+    left: 16.66%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+}
+
+/* strike line from --> middle column */
+.strike-4{ 
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    transform: translateX(-50%);
+}
+
+
+/* strike line from --> right column */
+.strike-5{
+    right: 16.66%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+}
+
+
+/* strike line from --> along the diagonal top-left to bottom-right  */
+.strike-6{
+    top: 0;
+    left: 0;
+    width: calc(100% * 1.414);
+    height: 6px;
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+
+/* strike line from --> along the diagonal top-right to bottom-left  */
+.strike-7{
+    top: 0;
+    right: 0;
+    width: calc(100% * 1.414);
+    height: 6px;
+    transform: rotate(-45deg);
+    transform-origin: top right;
+}
+
+
+/* reset button */
+button{
     margin-top: 20px;
     padding: 10px 25px;
     font-size: 1rem;
     cursor: pointer;
     border-radius: 8px;
     border: none;
-    background: #ff6b6b;
-    color: white;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    background: #f5d76e;
+    color: #111;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
-button:hover {
-    background: #ff4757;
+button:hover{
+    background: #e0c060;
 }
 
+/*status text*/
 #status {
     margin-top: 15px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
+    color: #f5d76e;
 }
