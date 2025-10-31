@@ -52,4 +52,12 @@ Each move updates the board and checks:
 
 - A strike line appears for the corresponding winning pattern.
 
+How to Run Locally
+
+Clone this repository:
+```bash
+
+```
+- Open the index.html file in your browser.
+- That’s it — the game will launch instantly!
 
