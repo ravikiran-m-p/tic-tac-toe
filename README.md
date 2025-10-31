@@ -21,3 +21,18 @@ It features a golden neon design, smooth animations, and dynamic strike effects 
 - **HTML5** — game layout and structure.  
 - **CSS3** — styling, animations, and effects.  
 - **JavaScript (ES6)** — game logic and interactivity.
+
+
+---
+
+##  How to Play
+
+1. Open the game in your browser.  
+2. Player **X** starts first.  
+3. Click on any empty cell to place your mark.  
+4. Player **O** takes the next turn.  
+5. The first player to align three symbols (row, column, or diagonal) wins.  
+6. If all cells are filled without a winner, it’s a **draw**.  
+7. Click **Reset Game** to start a new round.
+
+---
