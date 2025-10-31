@@ -36,3 +36,20 @@ It features a golden neon design, smooth animations, and dynamic strike effects 
 7. Click **Reset Game** to start a new round.
 
 ---
+
+##  Game Logic
+
+- The game board is represented as a 9-cell array:
+  ```js
+  let board = ["", "", "", "", "", "", "", "", ""];
+Each move updates the board and checks:
+
+- If a player has won
+
+- If the game is a draw
+
+- Whose turn is next
+
+- A strike line appears for the corresponding winning pattern.
+
+
