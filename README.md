@@ -12,3 +12,12 @@ It features a golden neon design, smooth animations, and dynamic strike effects 
 -  **Winning strike line** — visually highlights the winning move.  
 -  **Reset option** — restart the game at any time.  
 -  **Draw detection** — announces when no more moves are left.
+
+
+
+---
+## Technologies Used
+
+- **HTML5** — game layout and structure.  
+- **CSS3** — styling, animations, and effects.  
+- **JavaScript (ES6)** — game logic and interactivity.
