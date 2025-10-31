@@ -56,8 +56,16 @@ How to Run Locally
 
 Clone this repository:
 ```bash
-
+https://github.com/ravikiran-m-p/tic-tac-toe.git
 ```
 - Open the index.html file in your browser.
 - That’s it — the game will launch instantly!
+
+##Future Improvements
+
+- Add sound effects for clicks and wins.
+
+- Optimize for smaller mobile screens.
+
+- Add dark/light theme toggle.
 
