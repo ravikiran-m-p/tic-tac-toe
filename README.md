@@ -48,9 +48,9 @@ Each move updates the board and checks:
 
 - A strike line appears for the corresponding winning pattern.
 
-How to Run Locally
+## How to Run Locally
 
-Clone this repository:
+- Clone this repository:
 ```bash
 https://github.com/ravikiran-m-p/tic-tac-toe.git
 ```
