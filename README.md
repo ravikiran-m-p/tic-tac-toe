@@ -13,8 +13,6 @@ It features a golden neon design, smooth animations, and dynamic strike effects 
 -  **Reset option** — restart the game at any time.  
 -  **Draw detection** — announces when no more moves are left.
 
-
-
 ---
 ## Technologies Used
 
@@ -22,11 +20,9 @@ It features a golden neon design, smooth animations, and dynamic strike effects 
 - **CSS3** — styling, animations, and effects.  
 - **JavaScript (ES6)** — game logic and interactivity.
 
-
 ---
 
 ##  How to Play
-
 1. Open the game in your browser.  
 2. Player **X** starts first.  
 3. Click on any empty cell to place your mark.  
