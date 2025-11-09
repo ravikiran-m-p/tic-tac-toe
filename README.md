@@ -61,7 +61,7 @@ https://github.com/ravikiran-m-p/tic-tac-toe.git
 
 ---
 
-##Future Improvements
+## Future Improvements
 
 - Add sound effects for clicks and wins.
 
