@@ -14,7 +14,8 @@ const winningConditions = [
 ];
 
 
-function handleCellClick(e){
+function handleCellClick(e)
+{
     const index = e.target.dataset.index;
     if (board[index] !== "" || !gameActive) 
         return;
