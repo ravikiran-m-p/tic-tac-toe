@@ -60,8 +60,8 @@ function checkWinner()
         return;
     }
 
-    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-    statusText.textContent = `Player ${currentPlayer}'s turn`;
+   currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+   statusText.textContent = `Player ${currentPlayer}'s turn`;
 }
 
 function resetGame()
