@@ -24,7 +24,6 @@ function handleCellClick(e)
     e.target.textContent = currentPlayer;
     e.target.style.transform = "scale(0)";
     setTimeout(() => e.target.style.transform = "scale(1)", 50);
-
     checkWinner();
 }
 
