@@ -1,4 +1,5 @@
-body{
+body 
+{
     font-family: 'Arial', sans-serif;
     display: flex;
     flex-direction: column;
@@ -10,19 +11,44 @@ body{
     color: #f5d76e;
 }
 
-h1{
+
+h1 
+{
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #000;
+    letter-spacing: 2px;
+}
+
+.mode_selector 
+{
     margin-bottom: 20px;
-    color: #f5d76e;
-    text-shadow: 1px 1px 4px #000;
+    display: flex;
+    gap: 20px;
 }
 
 
-.board-container{
+
+.mode_selector label 
+{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.mode_selector input 
+{
+    accent-color: #f5d76e;
+}
+
+
+.board_container 
+{
     position: relative;
 }
 
 
-.board{
+.board 
+{
     display: grid;
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 120px);
@@ -30,11 +56,11 @@ h1{
     background: #111;
     padding: 15px;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.9);
 }
 
-/*each cell style with color golden and trasnition effects when clicked */
-.cell{
+.cell 
+{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,123 +69,153 @@ h1{
     background: linear-gradient(145deg, #333, #111);
     border-radius: 12px;
     border: 2px solid #f5d76e;
-    box-shadow: inset 2px 2px 5px #222, inset -2px -2px 5px #444;
-    transition: transform 0.2s, background 0.3s;
+    transition: all 0.3s ease;
     color: #f5d76e;
+    font-weight: bold;
 }
 
-/* when hover the cells white appears on that cell only*/
-.cell:hover{
-    transform: scale(1.1);
-    background: linear-gradient(145deg, #444, #222);
+.cell:hover 
+{
+    transform: scale(1.05);
+    background: #444;
+    box-shadow: 0 0 15px rgba(245, 215, 110, 0.4);
 }
 
-/* strike line */
-#strikeLine{
+
+
+.winner_cell 
+{
+    background: linear-gradient(145deg, #f5d76e, #b8860b) !important;
+    color: #111 !important;
+    box-shadow: 0 0 20px #f5d76e;
+    transform: scale(1.05);
+}
+
+
+
+#strike_line 
+{
     position: absolute;
-    background: linear-gradient(to right, #f5d76e, #ffd700); 
-    border-radius: 3px;
-    transition: all 0.4s ease;
-    z-index: 1;
-}
-
-/* strike line from --> top row */
-.strike-0{
-    top: 16.66%;
-    left: 0;
-    width: 100%;
-    height: 6px;
-}
-
-/* strike line from --> middle row */
-.strike-1 {
-    top: 50%;
-    left: 0;
-    width: 100%;
-    height: 6px;
-    transform: translateY(-50%);
-}
-
-/* strike line from --> bottom row */
-.strike-2{
-    bottom: 16.66%;
-    left: 0;
-    width: 100%;
-    height: 6px;
-}
-
-/* strike line from --> left column */
-.strike-3{
-    left: 16.66%;
-    top: 0;
-    width: 6px;
-    height: 100%;
-}
-
-/* strike line from --> middle column */
-.strike-4{ 
-    left: 50%;
-    top: 0;
-    width: 6px;
-    height: 100%;
-    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 0 10px #fff;
 }
 
 
-/* strike line from --> right column */
-.strike-5{
-    right: 16.66%;
-    top: 0;
-    width: 6px;
-    height: 100%;
+.strike_0 
+{ 
+    top: 16.6%; 
+    left: 0; 
+    width: 100%; 
+    height: 6px; 
+}
+.strike_1 
+{ 
+    top: 50%; 
+    left: 0; 
+    width: 100%; 
+    height: 6px; 
+    transform: translateY(-50%); 
 }
 
-
-/* strike line from --> along the diagonal top-left to bottom-right  */
-.strike-6{
-    top: 0;
-    left: 0;
-    width: calc(100% * 1.414);
-    height: 6px;
-    transform: rotate(45deg);
-    transform-origin: top left;
+.strike_2 
+{ 
+    bottom: 16.6%; 
+    left: 0; 
+    width: 100%; 
+    height: 6px; 
 }
 
-
-/* strike line from --> along the diagonal top-right to bottom-left  */
-.strike-7{
-    top: 0;
-    right: 0;
-    width: calc(100% * 1.414);
-    height: 6px;
-    transform: rotate(-45deg);
-    transform-origin: top right;
+.strike_3 
+{ 
+    left: 16.6%; 
+    top: 0; 
+    height: 100%; 
+    width: 6px; 
 }
 
+.strike_4 
+{ 
+    left: 50%; 
+    top: 0; 
+    height: 100%; 
+    width: 6px; 
+    transform: translateX(-50%); 
+}
 
-/* reset button */
-button{
-    margin-top: 20px;
-    padding: 10px 25px;
-    font-size: 1rem;
+.strike_5 
+{
+    right: 16.6%; 
+    top: 0; 
+    height: 100%; 
+    width: 6px; 
+}
+
+.strike_6 
+{ 
+    top: 0; 
+    left: 0; 
+    width: 141%; 
+    height: 6px; 
+    transform: rotate(45deg); 
+    transform-origin: top left; 
+}
+
+.strike_7 
+{ 
+    top: 0; 
+    right: 0; 
+    width: 141%; 
+    height: 6px; 
+    transform: rotate(-45deg); 
+    transform-origin: top right; 
+}
+
+button
+{
+    margin-top: 25px;
+    padding: 12px 35px;
+    font-size: 1.1rem;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 50px;
     border: none;
     background: #f5d76e;
     color: #111;
     font-weight: bold;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
     transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-button:hover{
-    background: #e0c060;
+
+
+button:hover
+{
+    background: #fff;
+    transform: translateY(-3px);
 }
 
-/*status text*/
-#status {
+
+
+
+#game_status
+{
     margin-top: 15px;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #f5d76e;
+}
+
+@media (max-width: 400px)
+{
+    .board
+    {
+        grid-template-columns: repeat(3, 90px);
+        grid-template-rows: repeat(3, 90px);
+    }
+    .cell
+    { 
+        font-size: 2rem; 
+    }
 }
