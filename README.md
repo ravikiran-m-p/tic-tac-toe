@@ -17,7 +17,7 @@ https://ravikiran-m-p.github.io/tic-tac-toe/
 This project is optimized for **GitHub Pages**.
 
 1. Create a new GitHub repository.
-2. Upload `index.html`, `style.css`, `script.js`, and `xo_logo.jpg`.
+2. Upload `index.html`, `style.css`, `script.js`, and `XOX.png`.
 3. Enable GitHub Pages in **Settings > Pages**.
 
 ##  Tech
